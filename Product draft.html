@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarGlow Parol Kit - Build Your Own Christmas Star</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffe4e1; 
+        }
+        header {
+            background: #d32f2f; 
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            /* overlay + background image (updated to requested link) */
+            background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('parol5.webp') no-repeat center/cover;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            color: white; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero p {
+            font-size: 1.2em;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: scale(1.05); 
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 10px;
+        }
+        .full-width-card {
+            grid-column: 1 / -1; 
+        }
+        .build-box {
+            background: #fff8dc; 
+            border: 2px solid #ffd700; 
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .build-box::after {
+            content: "📌 This part is important!"; 
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: #ffd700;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .demo {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .demo button {
+            background: #ffd700; 
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .demo button:hover {
+            background: #ffed4e;
+        }
+        #parol-demo {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background: url('https://www.christmasinthephilippines.com/parol/') no-repeat center/cover;
+            border-radius: 50%;
+            animation: glow 2s infinite alternate; 
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 20px #ffd700; }
+            to { box-shadow: 0 0 40px #ffd700; }
+        }
+        .charity {
+            background: #fff8dc; 
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        .modal-content h3 {
+            color: #d32f2f;
+        }
+        footer {
+            background: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .product-grid { grid-template-columns: 1fr; } 
+            .full-width-card { grid-column: 1; } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>StarLite Parol Kit</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#product">The Kit</a>
+            <a href="#build">How to Build</a>
+            <a href="#charity">Charity</a>
+            <a href="#buy">Buy Now</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Light Up Your Holidays!</h1>
+        <p>Build your own Christmas star. Launching December 2026 – Fun for kids, magical for all!</p>
+        <p>Target Ages: 6-10 (with adult keychain version)</p>
+    </section>
+
+    <section id="product">
+        <h2>The StarLite Parol Kit</h2>
+        <p>Inspired by the Filipino Parol, this kit lets kids snap together safe, pre-cut plastic pieces into a glowing five-point star. Includes an LED module for that magical inside light. Perfect for decorating, gifting, or keeping as a keepsake.</p>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="parol1.webp" alt="Pre-cut plastic pieces for building">
+                <h3>Easy-to-Assemble Pieces</h3>
+                <p>Safe, snap-together design – no tools needed!</p>
+            </div>
+            <div class="product-card">
+                <img src="parol2.webp" alt="LED module lighting up the star">
+                <h3>Glowing LED Heart</h3>
+                <p>Battery-powered light that shines from within.</p>
+            </div>
+            <div class="product-card">
+                <img src="parol3.webp" alt="Small keychain star">
+                <h3>Adult Keychain Version</h3>
+                <p>Mini star for on-the-go holiday cheer.</p>
+            </div>
+            <div class="product-card full-width-card">
+                <img src="parol4.jpg" alt="Prototype Image">
+                <h3>Prototype Image</h3>
+                <p>Poster for the product</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="build">
+        <div class="build-box">
+            <h2>How to Build Your Parol</h2>
+            <p>Simple steps for kids to create their own star!</p>
+            <ol>
+                <li>Unpack the pre-cut pieces.</li>
+                <li>Snap them together into a star shape.</li>
+                <li>Insert the LED module and turn it on.</li>
+                <li>Hang it up and enjoy the glow!</li>
+            </ol>
+            <div class="demo">
+                <button onclick="startDemo()">Try the Demo!</button>
+                <div id="parol-demo"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="charity" class="charity">
+        <h2>Giving Back</h2>
+        <p>20% of every sale goes to chosen charity of the school, supporting child education and holiday programs for Christmas project. Your purchase helps light up lives – just like the Parol.</p>
+        <p>Learn more: <a href="https://www.unicef.org" target="_blank">UNICEF</a></p>
+    </section>
+
+    <section id="buy">
+        <h2>Pre-Order Now (Launching Dec 2026)</h2>
+        <p>Price: $15 (Kids Kit) / $5 (Keychain). Limited stock – proceeds to charity!</p>
+        <button onclick="alert('Thank you! Your pre-order is noted.')">Buy Now</button>
+    </section>
+
+    <!-- Modal for demo popup -->
+    <div id="demo-modal" class="modal">
+        <div class="modal-content">
+            <h3>Try It Yourself and Buy Now!</h3>
+            <p>Watch your star glow and get ready to light up the holidays. Pre-order now – launching December 2026!</p>
+            <p><strong>Pricing:</strong> $15 (Kids Kit) / $5 (Keychain). Sales amount will proceed to chosen charity</p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 StarLite Parol Kit. All rights reserved. Inspired by Filipino traditions.</p>
+        <p>Help us make our community bigger.</p>
+    </footer>
+
+    <script>
+        // JS for demo animation and modal
+        function startDemo() {
+            const demo = document.getElementById('parol-demo');
+            demo.style.animation = 'glow 2s infinite alternate';
+            document.getElementById('demo-modal').style.display = 'flex'; 
+        }
+        function closeModal() {
+            document.getElementById('demo-modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
